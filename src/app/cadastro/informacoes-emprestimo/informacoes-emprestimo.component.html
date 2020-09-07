@@ -1,0 +1,22 @@
+<div>
+  <h2>Informações empréstimo</h2>
+  <form [formGroup]="formInformacoesEmprestimo" class="form-group form">
+    <mat-form-field appearance="outline">
+      <mat-label>Valor do empréstimo</mat-label>
+      <input matInput currencyMask class="example-right-align" formControlName="valorEmprestimo" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Forma de pagamento</mat-label>
+      <mat-select formControlName="formaPagamento">
+        <mat-option *ngFor="let item of formaPagamento" [value]="item.value">{{item.label}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <span><b>Parcelas fixas:</b> O valor é descontado diretamente da sua conta na data combinada.</span><br>
+  <span><b>Reinvestindo:</b> Realizado o pagamento fixo do mês mais uma parcela adicional sendo investida em algum dos 4 investimentos do Bmg.</span>
+</div>
+<div class="container-botao">
+  <button class="btn-form background-orange" (click)="sendForm()">Avançar</button>
+</div>
+
+

@@ -1,0 +1,22 @@
+<app-title-minha-bmg [internetBanking]="true"></app-title-minha-bmg>
+
+<mat-card class="main-card">
+  <span>Olá, Loja da Maria<br></span>
+  <span class="min"><strong>Ag</strong> 0002 <strong>Cc</strong> 3265448-4</span>
+</mat-card>
+
+<mat-card class="saldo-card">
+  <mat-card-title>
+    <mat-icon class="label-orange">attach_money</mat-icon> Saldo disponível
+  </mat-card-title>
+  <mat-card-content>R$ 130.000,00</mat-card-content>
+</mat-card>
+
+<div class="servicos">
+  <mat-card class="servico-card" *ngFor="let item of servicos">
+    <mat-card-title>
+      <mat-icon class="label-orange">{{item.icon}}</mat-icon>
+      <p>{{item.servico}}</p>
+    </mat-card-title>
+  </mat-card>
+</div>

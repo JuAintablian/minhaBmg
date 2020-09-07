@@ -1,0 +1,32 @@
+.content {
+  background-color: #FF6300;
+}
+
+.logo {
+  width: 60%;
+}
+
+.content-form {
+  background-color: #F5F5F5;
+  padding: 60px;
+  border-radius: 20px;
+}
+
+.form-login {
+  display: flex;
+  flex-flow: column;
+}
+
+h1 {
+  font-weight: bold;
+  color: #555;
+}
+
+.btn-form {
+  border: 30px;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 14px;
+  width: 40%;
+  padding: 10px;
+}

@@ -1,0 +1,23 @@
+.title {
+  display: flex;
+  align-items: left;
+  height: 150px !important;
+  justify-content: center;
+}
+
+.title a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.title .logo {
+  max-height: 150px;
+}
+
+.content {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}

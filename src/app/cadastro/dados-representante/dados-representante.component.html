@@ -1,0 +1,78 @@
+<div>
+  <h2>Dados do representante</h2>
+  <form [formGroup]="formDadosRepresentante" class="form-group form">
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo</mat-label>
+      <mat-select formControlName="tipo">
+        <mat-option *ngFor="let item of tipoRepresentantes" [value]="item.value">{{item.label}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Nome completo</mat-label>
+      <input matInput placeholder="Digite o nome completo" formControlName="nome">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>CPF</mat-label>
+      <input matInput placeholder="Digite o CPF" formControlName="CPF" mask="000.000.000-00">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>RG</mat-label>
+      <input matInput placeholder="Digite o RG" formControlName="RG" mask="00.000.000-A">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Telefone</mat-label>
+      <input matInput placeholder="(00) 00000-0000" formControlName="telefone" mask="(00)00000-0000">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Sexo</mat-label>
+      <mat-select formControlName="sexo">
+        <mat-option value="F">Feminino</mat-option>
+        <mat-option value="M">Masculino</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-checkbox formControlName="administrador" > Administrador</mat-checkbox>
+    <button mat-icon-button class="btn-upload">
+      <mat-icon class="label-orange">publish</mat-icon><span>Upload documento</span>
+    </button>
+  </form>
+  <button mat-icon-button (click)="addSocio()" *ngIf="!haveSocio">
+    <mat-icon class="label-orange">add_circle</mat-icon> <span> Adicionar representante</span>
+  </button>
+  <button mat-icon-button (click)="removeSocio()" *ngIf="haveSocio">
+    <mat-icon class="label-orange">remove_circle</mat-icon> <span> Remover representante</span>
+  </button>
+  <form *ngIf="haveSocio" [formGroup]="formDadosSocio" class="form-group form">
+    <mat-form-field appearance="outline">
+      <mat-label>Nome completo</mat-label>
+      <input matInput placeholder="Digite o nome completo" formControlName="nomeSocio">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>CPF</mat-label>
+      <input matInput placeholder="Digite o CPF" formControlName="CPFSocio" mask="000.000.000-00">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>RG</mat-label>
+      <input matInput placeholder="Digite o RG" formControlName="RGSocio" mask="00.000.000-A">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Telefone</mat-label>
+      <input matInput placeholder="(00) 00000-0000" formControlName="telefoneSocio" mask="(00)00000-0000">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Sexo</mat-label>
+      <mat-select formControlName="sexoSocio">
+        <mat-option value="F">Feminino</mat-option>
+        <mat-option value="M">Masculino</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-checkbox formControlName="administradorSocio" > Administrador</mat-checkbox>
+    <button mat-icon-button class="btn-upload">
+      <mat-icon class="label-orange">publish</mat-icon><span>Upload documento</span>
+    </button>
+  </form>
+</div>
+<div class="container-botao">
+  <button class="btn-form background-orange" (click)="sendForm()">Avançar</button>
+</div>
+
+

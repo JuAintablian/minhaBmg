@@ -1,0 +1,19 @@
+<div>
+  <h2>Informações Adicionais</h2>
+  <form [formGroup]="formInformacoesAdicionais" class="form-group form">
+    <mat-form-field appearance="outline">
+      <mat-label>Renda bruta mensal</mat-label>
+      <input matInput currencyMask class="example-right-align" formControlName="rendaMensal" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }">
+    </mat-form-field>
+    <mat-checkbox formControlName="possuiFuncionarios" (change)="onChangeFuncionarios($event)">Possui funcionarios?</mat-checkbox>
+    <mat-form-field appearance="outline" *ngIf="haveFuncionarios">
+      <mat-label>Quantos funcionários?</mat-label>
+      <input matInput placeholder="Digite a quantidade de funcionários" formControlName="qtdFuncionarios" type="number">
+    </mat-form-field>
+  </form>
+</div>
+<div class="container-botao">
+  <button class="btn-form background-orange" (click)="sendForm()">Avançar</button>
+</div>
+
+

@@ -1,0 +1,57 @@
+.table {
+  width: 80%;
+  margin: 35px 0;
+  padding-bottom: 240px !important;
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+mat-grid-tile {
+  border: 1px solid #ccc
+}
+
+mat-grid-tile img {
+  width: 60%;
+}
+
+mat-grid-tile p {
+  font-size: 18px;
+  margin: 20px 23px;
+}
+
+.w-4 {
+  width: 40%;
+  align-items: center;
+  text-align: center;
+}
+
+.w-6 {
+  width: 60%;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-primary {
+  border: 30px;
+  border-radius: 45px;
+  color: #fff;
+  font-size: 18px;
+  width: 30%;
+  height: 7%;
+}
+
+h1 {
+  color: #555;
+  margin: 30px 0 0;
+  font-weight: bold;
+}
+
+a {
+  margin: 0 30px 30px;
+}

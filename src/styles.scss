@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  width: 80%;
+}
+
+.label-orange {
+  color: #FF6300 !important;
+}
+
+.background-orange {
+  background-color: #FF6300 !important;
+}
+
+.link {
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+  margin: 30px;
+}
+
+.msg-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.msg-error {
+  background-color: #f44336;
+  color: #fff
+}
+

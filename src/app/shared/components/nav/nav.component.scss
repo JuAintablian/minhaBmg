@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 85px !important;
+  justify-content: center;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header .logo {
+  max-height: 50px;
+}
+
+.header .title-group {
+  padding-left: 25px;
+}
+
+.header .title-group i {
+  padding-right: 5px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item button{
+  padding-left: 25px;
+}

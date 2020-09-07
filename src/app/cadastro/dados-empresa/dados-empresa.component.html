@@ -1,0 +1,36 @@
+<div>
+  <h2>Dados da empresa</h2>
+  <form [formGroup]="formDadosEmpresa" class="form-group form">
+    <mat-form-field appearance="outline">
+      <mat-label>CNPJ</mat-label>
+      <input matInput placeholder="Digite o CNPJ" formControlName="CNPJ" mask="00.000.000/0000-00">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Razão Social</mat-label>
+      <input matInput placeholder="Digite a Razão social" formControlName="razaoSocial">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo de empresa</mat-label>
+      <mat-select formControlName="tipoEmpresa">
+        <mat-option *ngFor="let item of tiposEmpresa" [value]="item.value">{{item.label}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Telefone Comercial</mat-label>
+      <input matInput placeholder="(00) 0000-0000" formControlName="telefoneComercial" mask="(00)0000-0000">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Tempo de empresa (em meses)</mat-label>
+      <input matInput placeholder="Digite o tempo de empresa em meses" formControlName="tempoDeEmpresa" type="number">
+      <span matSuffix>meses</span>
+    </mat-form-field>
+    <button mat-icon-button class="btn-upload">
+      <mat-icon class="label-orange">publish</mat-icon><span>Upload Ato Constitutivo</span>
+    </button>
+  </form>
+</div>
+<div class="container-botao">
+  <button class="btn-form background-orange" (click)="sendForm()">Avançar</button>
+</div>
+
+

@@ -1,0 +1,10 @@
+<div>
+  <h2>Serviços adicionais</h2>
+  <form [formGroup]="formServicosAdicionais" class="form-group form">
+    <mat-checkbox formControlName="poupaParaMim" >Poupa para mim</mat-checkbox>
+    <mat-checkbox formControlName="voltaParaMim" >Volta para mim</mat-checkbox>
+  </form>
+</div>
+<div class="container-botao">
+  <button class="btn-form background-orange" (click)="sendForm()">Avançar</button>
+</div>

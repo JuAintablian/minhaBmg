@@ -1,0 +1,58 @@
+<h1>Resumo</h1>
+
+<div class="group">
+  <div class="group-info">
+    <h2>Dados Empresa</h2>
+    <span><strong>CNPJ: </strong>{{ dados.empresa.cnpj }}</span>
+    <span><strong>Razão Social: </strong>{{ dados.empresa.razaoSocial }}</span>
+    <span><strong>Tipo de empresa: </strong>{{ dados.empresa.tipoEmpresa }}</span>
+    <span><strong>Telefone Comercial: </strong>{{ dados.empresa.telefone }}</span>
+    <span><strong>Tempo de empresa: </strong>{{ dados.empresa.anos }} meses</span>
+  </div>
+  <div class="group-info">
+    <h2>Dados Representante</h2>
+    <span><strong>Tipo: </strong>{{ dados.representante.tipo }}</span>
+    <span><strong>Nome Completo: </strong>{{ dados.representante.nome }}</span>
+    <span><strong>CPF: </strong>{{ dados.representante.cpf }}</span>
+    <span><strong>RG: </strong>{{ dados.representante.rg }}</span>
+    <span><strong>Telefone: </strong>{{ dados.representante.telefone }}</span>
+    <span><strong>Sexo: </strong>{{ dados.representante.sexo === 'F' ? 'Feminino' : 'Masculino' }}</span>
+    <span><strong>Administrador: </strong>{{ dados.representante.administrador ? 'Sim' : 'Não' }}</span>
+  </div>
+  <div *ngIf="dados.representante.socio" class="group-info">
+    <h2>Dados Representante 2</h2>
+    <span><strong>Tipo: </strong>{{ dados.representante.socio.tipo }}</span>
+    <span><strong>Nome Completo: </strong>{{ dados.representante.socio.nome }}</span>
+    <span><strong>CPF: </strong>{{ dados.representante.socio.cpf }}</span>
+    <span><strong>RG: </strong>{{ dados.representante.socio.rg }}</span>
+    <span><strong>Telefone: </strong>{{ dados.representante.socio.telefone }}</span>
+    <span><strong>Sexo: </strong>{{ dados.representante.socio.sexo === 'F' ? 'Feminino' : 'Masculino' }}</span>
+    <span><strong>Administrador: </strong>{{ dados.representante.socio.administrador ? 'Sim' : 'Não' }}</span>
+
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-info">
+    <h2>Informações Adicionais</h2>
+    <span><strong>Renda bruta mensal: </strong>R${{ dados.adicionais.renda }}</span>
+    <span><strong>Possui Funcionários? </strong>{{ dados.adicionais.funcionarios ? 'Sim' : 'Não' }}</span>
+    <span *ngIf="dados.adicionais.funcionarios"><strong>Quantidade de funcionários: </strong>{{ dados.adicionais.qtdFuncionarios }}</span>
+  </div>
+
+  <div class="group-info">
+    <h2>Informações Empréstimo</h2>
+    <span><strong>Valor empréstimo: </strong>R${{ dados.emprestimo.valor }}</span>
+    <span><strong>Forma de pagamento: </strong>{{ dados.emprestimo.formaPagamento }}</span>
+  </div>
+
+  <div class="group-info">
+    <h2>Serviços adicionais</h2>
+    <span><strong>Poupa para mim: </strong>{{ dados.servicosAd.poupa ? 'Sim' : 'Não' }}</span>
+    <span><strong>Volta para mim: </strong>{{ dados.servicosAd.volta ? 'Sim' : 'Não' }}</span>
+  </div>
+</div>
+
+<div class="group">
+  <button class="btn-analise background-orange" (click)="goToAnalise()">Análise de crédito</button>
+</div>

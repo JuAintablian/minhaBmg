@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<app-title-minha-bmg></app-title-minha-bmg>
+<div class="content">
+  <h1>Benefícios</h1>
+  <mat-grid-list cols = "3" rowHeight="3:0.7" class="table">
+    <mat-grid-tile [colspan] = "1" [rowspan] = "1" *ngFor="let item of beneficios">
+      <div class="w-4">
+        <img src="assets/svg/check.svg">
+      </div>
+      <div class="w-6">
+        <p>{{item.label}}</p>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div>
+<div class="content">
+  <a mat-raised-button class="btn-primary background-orange" routerLink="/cadastro/dados-empresa">Abra sua conta</a>
+</div>
